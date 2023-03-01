@@ -7,7 +7,7 @@
     "@angular/forms": "8.x - 15.x",
     "google-libphonenumber": "^3.2.3",
     "intl-tel-input": "^17.0.3",
-    "ngx-bootstrap": "6.x - 9.x"
+    "ngx-bootstrap": "6.x - 10.x"
   },
   "repository": {
     "type": "git",
