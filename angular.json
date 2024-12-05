@@ -3,6 +3,39 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ngx-intl-tel-input": {
+      "root": "projects/ngx-intl-tel-input",
+      "sourceRoot": "projects/ngx-intl-tel-input/src",
+      "projectType": "library",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngx-intl-tel-input/tsconfig.lib.json",
+            "project": "projects/ngx-intl-tel-input/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-intl-tel-input/src/test.ts",
+            "tsConfig": "projects/ngx-intl-tel-input/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-intl-tel-input/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-intl-tel-input/tsconfig.lib.json",
+              "projects/ngx-intl-tel-input/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
     "ngx-intl-tel-input-app": {
       "root": "",
       "sourceRoot": "src",
@@ -127,40 +160,6 @@
           }
         }
       }
-    },
-    "ngx-intl-tel-input": {
-      "root": "projects/ngx-intl-tel-input",
-      "sourceRoot": "projects/ngx-intl-tel-input/src",
-      "projectType": "library",
-      "prefix": "ngx",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "tsConfig": "projects/ngx-intl-tel-input/tsconfig.lib.json",
-            "project": "projects/ngx-intl-tel-input/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ngx-intl-tel-input/src/test.ts",
-            "tsConfig": "projects/ngx-intl-tel-input/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-intl-tel-input/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-intl-tel-input/tsconfig.lib.json",
-              "projects/ngx-intl-tel-input/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        }
-      }
     }
-  },
-  "defaultProject": "ngx-intl-tel-input-app"
+  }
 }

@@ -24,6 +24,6 @@ export class AppComponent {
 	});
 
 	changePreferredCountries() {
-		this.preferredCountries = [CountryISO.India, CountryISO.Canada];
+		this.preferredCountries = [CountryISO.Pakistan, CountryISO.Canada];
 	}
 }
